@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+
+  vars_files:
+    - '../defaults/main.yml'
+
+  tasks:
+  - include: '../tasks/main.yml'
+    state: absent
+
+  - include: '../tasks/main.yml'
+    state: absent
+    pkg: lodash

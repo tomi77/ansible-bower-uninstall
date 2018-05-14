@@ -1,0 +1,4 @@
+- name: uninstall
+  command: "{{ bower_executable }} uninstall {{ pkg | default('') }}"
+  args:
+    chdir: "{{ chdir | default('.') }}"
